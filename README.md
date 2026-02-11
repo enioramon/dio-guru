@@ -1,4 +1,4 @@
-# Guru — Agente Financeiro com IA Generativa
+# 🤖 Guru — Agente Financeiro com IA Generativa
 
 **Guru** é um assistente financeiro com IA focado em **planejamento de metas**, **explicação de produtos** e **simulações simples**, com respostas **contextualizadas** a partir de uma base local (CSV/JSON) e com **mecanismos anti-alucinação**.
 
