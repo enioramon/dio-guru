@@ -6,15 +6,8 @@
 
 ---
 
-## ✨ Demo (Prints)
-
-> Coloque aqui imagens em `assets/` e atualize os links abaixo.
-
-- Tela do chat (Guru em ação):  
-  `assets/screenshot-chat.png`
-
-- Resumo do cliente (sidebar):  
-  `assets/screenshot-sidebar.png`
+### Tela principal do Guru
+![Tela principal do Guru](assets/screenshot-chat.png)
 
 ---
 
