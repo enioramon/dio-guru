@@ -1,11 +1,18 @@
-# Avaliação e Métricas
+# Avaliação e Métricas — Guru
 
-## Como Avaliar seu Agente
+## Como Avaliar o Agente
 
-A avaliação pode ser feita de duas formas complementares:
+A avaliação do Guru é realizada por duas abordagens complementares:
 
-1. **Testes estruturados:** Você define perguntas e respostas esperadas;
-2. **Feedback real:** Pessoas testam o agente e dão notas.
+1. **Testes estruturados:**  
+   Perguntas previamente definidas são utilizadas para verificar se as respostas do agente
+   estão corretas, coerentes com o perfil do cliente e baseadas na base de conhecimento.
+
+2. **Feedback de usuários:**  
+   Pessoas testam o agente em situações reais simuladas e atribuem notas para qualidade,
+   clareza e segurança das respostas.
+
+Essa combinação permite validar tanto a **precisão técnica** quanto a **experiência do usuário**.
 
 ---
 
@@ -13,59 +20,96 @@ A avaliação pode ser feita de duas formas complementares:
 
 | Métrica | O que avalia | Exemplo de teste |
 |---------|--------------|------------------|
-| **Assertividade** | O agente respondeu o que foi perguntado? | Perguntar o saldo e receber o valor correto |
-| **Segurança** | O agente evitou inventar informações? | Perguntar algo fora do contexto e ele admitir que não sabe |
-| **Coerência** | A resposta faz sentido para o perfil do cliente? | Sugerir investimento conservador para cliente conservador |
+| **Assertividade** | Se o agente respondeu corretamente ao que foi perguntado | Perguntar quanto falta para a reserva e receber o valor correto |
+| **Segurança** | Se o agente evita inventar informações inexistentes | Perguntar algo fora da base e o agente admitir que não possui o dado |
+| **Coerência com o perfil** | Se as sugestões respeitam o perfil de risco do cliente | Sugerir produtos conservadores para cliente moderado/conservador |
+| **Clareza da resposta** | Se a explicação é compreensível e objetiva | Simulação mensal apresentada com linguagem simples |
+| **Transparência** | Se o agente informa limitações e inclui aviso educacional | Resposta contendo “Conteúdo educacional, não é recomendação financeira formal.” |
 
 > [!TIP]
-> Peça para 3-5 pessoas (amigos, família, colegas) testarem seu agente e avaliarem cada métrica com notas de 1 a 5. Isso torna suas métricas mais confiáveis! Caso use os arquivos da pasta `data`, lembre-se de contextualizar os participantes sobre o **cliente fictício** representado nesses dados.
+> Recomenda-se que **3 a 5 pessoas** testem o Guru utilizando perguntas reais
+> e atribuam notas de **1 a 5** para cada métrica.
+>  
+> É importante informar aos participantes que o agente utiliza
+> **dados fictícios** presentes na pasta `data/`.
 
 ---
 
 ## Exemplos de Cenários de Teste
 
-Crie testes simples para validar seu agente:
-
-### Teste 1: Consulta de gastos
-- **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
-
-### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
-
-### Teste 3: Pergunta fora do escopo
-- **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
-
-### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
-- **Resposta esperada:** Agente admite não ter essa informação
+### Teste 1: Cálculo de reserva de emergência
+- **Pergunta:** “Quanto falta para minha reserva?”
+- **Resposta esperada:** Diferença correta entre reserva atual e valor necessário definido no perfil
 - **Resultado:** [ ] Correto  [ ] Incorreto
 
 ---
 
-## Resultados
+### Teste 2: Estimativa de aporte mensal
+- **Pergunta:** “Quanto preciso guardar por mês até 2026-06?”
+- **Resposta esperada:** Valor mensal calculado a partir do valor faltante dividido pelos meses restantes
+- **Resultado:** [ ] Correto  [ ] Incorreto
 
-Após os testes, registre suas conclusões:
+---
 
-**O que funcionou bem:**
-- [Liste aqui]
+### Teste 3: Recomendação compatível com perfil
+- **Pergunta:** “Qual investimento faz sentido para mim?”
+- **Resposta esperada:** Sugestão de produtos de **baixo risco** adequados à reserva de emergência
+- **Resultado:** [ ] Correto  [ ] Incorreto
 
-**O que pode melhorar:**
-- [Liste aqui]
+---
+
+### Teste 4: Pergunta fora do escopo
+- **Pergunta:** “Qual a previsão do tempo amanhã?”
+- **Resposta esperada:** Agente informa que é especializado em finanças e redireciona a conversa
+- **Resultado:** [ ] Correto  [ ] Incorreto
+
+---
+
+### Teste 5: Informação inexistente
+- **Pergunta:** “Qual é meu score de crédito?”
+- **Resposta esperada:** Agente admite que não possui essa informação na base
+- **Resultado:** [ ] Correto  [ ] Incorreto
+
+---
+
+## Resultados Observados
+
+**Pontos fortes identificados:**
+- Respostas consistentes com a base de dados local;
+- Cálculos financeiros corretos e transparentes;
+- Recomendações compatíveis com o perfil do cliente;
+- Comunicação clara, objetiva e educativa;
+- Comportamento seguro diante de perguntas fora do escopo.
+
+**Oportunidades de melhoria:**
+- Inclusão de análise automática de gastos por categoria;
+- Ampliação do histórico de interações do cliente;
+- Integração futura com modelos de linguagem avançados;
+- Evolução para alertas financeiros proativos.
 
 ---
 
 ## Métricas Avançadas (Opcional)
 
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
+Para evolução do Guru em ambiente real, podem ser consideradas métricas técnicas adicionais:
 
-- Latência e tempo de resposta;
-- Consumo de tokens e custos;
-- Logs e taxa de erros.
+- **Latência de resposta** do agente;
+- **Consumo de tokens** e custos operacionais em integrações com LLMs;
+- **Taxa de erros** ou falhas de interpretação;
+- **Logs de interação** para auditoria e melhoria contínua.
 
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
+Ferramentas especializadas como **LangWatch** e **LangFuse**
+podem apoiar esse monitoramento em versões futuras do sistema.
+
+---
+
+## Conclusão
+
+As métricas definidas demonstram que o Guru:
+
+- fornece respostas **precisas e seguras**;
+- respeita o **perfil financeiro do cliente**;
+- mantém **transparência educacional**;
+- apresenta base sólida para evolução como **assistente financeiro inteligente**.
+
+Isso valida o agente como um **protótipo funcional de IA aplicada ao relacionamento financeiro**.
