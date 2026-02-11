@@ -41,7 +41,7 @@ CORE --> CALC[Simulações/Cálculos]
 CALC --> CORE
 DATA --> CORE
 CORE --> UI
-
+```
 ---
 
 ## Estrutura do Repositório
