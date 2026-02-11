@@ -81,12 +81,17 @@ O tom é:
 
 ### Diagrama (visão conceitual)
 
-Fluxo geral:
-
-Usuário → Interface (Streamlit) → Núcleo do Guru →  
-Consulta à base local (JSON/CSV) → Cálculos determinísticos →  
-Resposta segura ao usuário
-
+```mermaid
+flowchart LR
+    U[Usuário] --> UI[Interface Streamlit]
+    UI --> CORE[Núcleo do Guru]
+    CORE --> DATA[Base de Conhecimento<br/>JSON / CSV]
+    CORE --> CALC[Cálculos Determinísticos]
+    DATA --> CORE
+    CALC --> CORE
+    CORE --> RESP[Resposta Segura]
+    RESP --> UI
+```
 ---
 
 ### Componentes
