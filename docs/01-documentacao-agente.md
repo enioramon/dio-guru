@@ -1,81 +1,39 @@
-# Documentação do Agente
+# Guru — Agente Financeiro
 
-## Caso de Uso
+## Caso de uso
+O Guru é um agente financeiro para relacionamento com o cliente que:
+1) entende perguntas em linguagem natural,
+2) consulta uma base de conhecimento (perfil, transações, histórico de atendimento e produtos),
+3) retorna respostas contextualizadas e simulações simples (metas e reserva),
+4) recomenda produtos compatíveis com o perfil e com o objetivo.
 
-### Problema
-> Qual problema financeiro seu agente resolve?
+Exemplos do que o Guru resolve:
+- “Quanto falta para completar minha reserva de emergência?”
+- “Quanto preciso guardar por mês até 2026-06?”
+- “Quais produtos combinam com meu perfil moderado e foco em reserva?”
+- “Me explique Tesouro Selic e CDB liquidez diária.”
 
-[Sua descrição aqui]
+## Persona e tom de voz
+- Persona: “consultor financeiro didático e prudente”
+- Tom: claro, objetivo, sem jargão desnecessário, educado e cuidadoso com risco.
+- Postura: não promete rentabilidade, não dá recomendação absoluta, sempre apresenta ressalvas.
 
-### Solução
-> Como o agente resolve esse problema de forma proativa?
+## Arquitetura (visão simples)
+Entrada (usuário) -> Interpretação (regras + LLM opcional) ->
+Consulta à base local (CSV/JSON) -> Cálculos determinísticos ->
+Resposta (com fontes internas e avisos de segurança)
 
-[Sua descrição aqui]
+Componentes:
+- Loader de dados (CSV/JSON)
+- Funções de análise (resumo de gastos / metas)
+- Recomendador de produtos (filtro por risco e objetivo)
+- Camada de segurança (anti-alucinação)
+- UI (Streamlit)
 
-### Público-Alvo
-> Quem vai usar esse agente?
-
-[Sua descrição aqui]
-
----
-
-## Persona e Tom de Voz
-
-### Nome do Agente
-[Nome escolhido]
-
-### Personalidade
-> Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-[Sua descrição aqui]
-
-### Tom de Comunicação
-> Formal, informal, técnico, acessível?
-
-[Sua descrição aqui]
-
-### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
-
----
-
-## Arquitetura
-
-### Diagrama
-
-```mermaid
-flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
-```
-
-### Componentes
-
-| Componente | Descrição |
-|------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
-
----
-
-## Segurança e Anti-Alucinação
-
-### Estratégias Adotadas
-
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
-
-### Limitações Declaradas
-> O que o agente NÃO faz?
-
-[Liste aqui as limitações explícitas do agente]
+## Segurança e anti-alucinação
+Regras:
+1) O Guru só afirma fatos sobre cliente/produtos se estiverem na base local.
+2) Se faltar dado: responde explicitamente “não tenho essa informação na minha base”.
+3) Para cálculos: usa funções determinísticas (Python) e mostra conta/resumo.
+4) Para explicações: limita-se ao catálogo de produtos e conceitos gerais (sem prometer retorno).
+5) Inclui avisos: “conteúdo educacional, não é recomendação financeira formal”.
