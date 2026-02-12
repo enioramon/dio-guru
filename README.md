@@ -45,6 +45,63 @@ A[Usuário]
 
 ---
 
+### Princípio central
+
+> **LLM não decide números.  
+> O código determinístico garante a verdade dos dados.**
+
+Esse padrão é utilizado em **sistemas financeiros reais** para evitar alucinação.
+
+---
+
+## Funcionalidades Principais
+
+### Planejamento financeiro
+
+- Cálculo do valor faltante para a **reserva de emergência**
+- Estimativa de **quanto guardar por mês até um prazo**
+- Consideração automática do **perfil de risco do cliente**
+
+### Consulta de dados do perfil
+
+- Patrimônio total  
+- Renda mensal  
+- Perfil do investidor  
+
+### Educação financeira
+
+- Explicação de produtos do catálogo  
+- Orientações sem promessas de retorno  
+- Respostas com **disclaimer educacional obrigatório**
+
+### Segurança contra alucinação
+
+- Respostas baseadas **somente na base local**
+- Recusa explícita a dados inexistentes (ex.: score de crédito)
+- Fallback determinístico caso o LLM falhe
+
+---
+
+## Tecnologias Utilizadas
+
+- **Python**
+- **Streamlit** (interface conversacional)
+- **OpenAI API** (LLM)
+- **Pandas**
+- **JSON / CSV** (base de conhecimento)
+- **Dateutil** (cálculos de prazo)
+
+---
+
+## Estrutura do Projeto
+
+
+
+
+
+
+---
+
 ## Estrutura do Repositório
 
 ```
