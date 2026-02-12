@@ -82,16 +82,26 @@ O tom é:
 ### Diagrama (visão conceitual)
 
 ```mermaid
-flowchart LR
-    U[Usuário] --> UI[Interface Streamlit]
-    UI --> CORE[Núcleo do Guru]
-    CORE --> DATA[Base de Conhecimento<br/>JSON / CSV]
-    CORE --> CALC[Cálculos Determinísticos]
-    DATA --> CORE
-    CALC --> CORE
-    CORE --> RESP[Resposta Segura]
-    RESP --> UI
+flowchart TD
+
+A[Usuário] --> B[Interface Streamlit]
+
+B --> C[LLM - OpenAI<br/>Interpretação e linguagem natural]
+
+C --> D[Guru Core<br/>Regras, cálculos e validações determinísticas]
+
+D --> E[Base de Conhecimento]
+
+E --> E1[perfil_investidor.json]
+E --> E2[produtos_financeiros.json]
+E --> E3[transacoes.csv]
+E --> E4[historico_atendimento.csv]
+
+D --> F[Resposta segura<br/>com anti-alucinação]
+
+F --> B
 ```
+
 ---
 
 ### Componentes
