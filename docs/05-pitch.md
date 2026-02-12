@@ -1,14 +1,13 @@
 # Pitch (3 minutos) — Guru
 
-> [!TIP]
-> Você pode utilizar 2 ou 3 slides simples apenas para apoiar a explicação
+> Você pode utilizar 2 ou 3 slides simples apenas para apoiar a explicação  
 > e finalizar mostrando o Guru funcionando na prática.
 
 ---
 
-## Roteiro Sugerido
+## Roteiro do Pitch
 
-### 1. O Problema (30 seg)
+### 1. O Problema (30s)
 
 Hoje, muitas pessoas possuem dados financeiros disponíveis — como renda, gastos,
 metas e produtos de investimento — mas têm dificuldade em transformar essas
@@ -21,9 +20,9 @@ Perguntas como:
 - “Qual produto é adequado para o meu perfil?”
 
 ainda exigem conhecimento técnico ou atendimento humano,
-o que torna o processo lento, confuso e pouco acessível.
+tornando o processo lento, confuso e pouco acessível.
 
-Além disso, assistentes virtuais tradicionais costumam ser apenas reativos
+Além disso, assistentes virtuais tradicionais são apenas reativos
 e podem gerar respostas imprecisas quando não possuem contexto suficiente.
 
 ---
@@ -38,19 +37,19 @@ um assistente financeiro inteligente com foco em:
 - explicação simples de produtos financeiros;
 - respostas seguras baseadas em dados estruturados.
 
-O Guru integra:
+O Guru combina:
 
-- **perfil do investidor**  
-- **metas financeiras**  
-- **histórico de dados locais em JSON e CSV**  
-- **simulações determinísticas em Python**
+- **IA generativa para compreensão e comunicação em linguagem natural**;
+- **dados estruturados do cliente em JSON e CSV**;
+- **cálculos determinísticos em Python**, garantindo precisão;
+- **mecanismos explícitos de segurança contra alucinações**.
 
 Com isso, ele consegue:
 
 - calcular quanto falta para a reserva de emergência;
 - estimar quanto guardar por mês até um prazo;
 - sugerir produtos compatíveis com o perfil de risco;
-- evitar alucinações, respondendo apenas com dados disponíveis.
+- responder com transparência quando não possui determinada informação.
 
 Todas as respostas incluem um aviso educativo,
 reforçando que não se trata de recomendação financeira formal.
@@ -61,52 +60,64 @@ reforçando que não se trata de recomendação financeira formal.
 
 Na demonstração, apresento três interações principais:
 
-1. **Consulta de reserva de emergência**  
-   Pergunto:  
-   *“Quanto falta para minha reserva?”*  
-   O Guru calcula automaticamente o valor faltante,
-   mostra o prazo da meta e sugere produtos conservadores.
+**1. Consulta de reserva de emergência**  
+Pergunto:  
+*“Quanto falta para minha reserva?”*  
 
-2. **Simulação de aporte mensal**  
-   Pergunto:  
-   *“Quanto preciso guardar por mês até 2026-06?”*  
-   O agente calcula os meses restantes e apresenta
-   o valor mensal necessário de forma transparente.
+O Guru calcula automaticamente o valor faltante,
+mostra o prazo da meta e sugere produtos conservadores,
+de forma clara e personalizada.
 
-3. **Pergunta fora do escopo**  
-   Pergunto:  
-   *“Qual é meu score de crédito?”*  
-   O Guru responde com segurança que não possui essa informação,
-   demonstrando comportamento anti-alucinação.
+---
+
+**2. Simulação de aporte mensal**  
+Pergunto:  
+*“Quanto preciso guardar por mês até 2026-06?”*  
+
+O agente calcula os meses restantes e apresenta
+o valor mensal necessário de forma transparente,
+explicando a conta ao usuário.
+
+---
+
+**3. Pergunta fora do escopo**  
+Pergunto:  
+*“Qual é meu score de crédito?”*  
+
+O Guru responde com segurança que não possui essa informação,
+demonstrando comportamento **anti-alucinação**.
+
+---
 
 Essa demonstração evidencia:
 
 - personalização por contexto do cliente;  
-- cálculos corretos e transparentes;  
+- cálculos corretos e auditáveis;  
 - respostas seguras e confiáveis.
 
 ---
 
-### 4. Diferencial e Impacto (30 seg)
+### 4. Diferencial e Impacto (30s)
 
 O principal diferencial do Guru é unir:
 
-- **IA aplicada ao relacionamento financeiro**,  
-- **dados estruturados reais de contexto**,  
-- **mecanismos explícitos de segurança contra alucinações**.
+- **IA aplicada ao relacionamento financeiro**;  
+- **dados estruturados reais de contexto**;  
+- **controle determinístico de cálculos e regras**;  
+- **segurança explícita contra alucinações**.
 
-Isso transforma um simples chatbot em um
-**assistente financeiro consultivo e educativo**.
+Isso transforma um chatbot tradicional em um  
+**assistente financeiro consultivo, educativo e confiável**.
 
 O impacto dessa solução está em:
 
 - ampliar o acesso à educação financeira;  
 - facilitar o planejamento de metas pessoais;  
-- apoiar instituições financeiras na criação de
+- apoiar instituições financeiras na criação de  
   experiências digitais mais seguras e humanas.
 
-O Guru demonstra como a IA pode ser usada
-com **responsabilidade, transparência e foco no usuário**.
+O Guru demonstra, na prática, como a IA pode ser usada com  
+**responsabilidade, transparência e foco real no usuário**.
 
 ---
 
@@ -123,3 +134,4 @@ com **responsabilidade, transparência e foco no usuário**.
 ## Link do Vídeo
 
 > Cole aqui o link do vídeo após a gravação.
+
