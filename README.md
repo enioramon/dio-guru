@@ -94,21 +94,11 @@ Esse padrão é utilizado para evitar alucinação.
 
 ## Estrutura do Projeto
 
-
-
-
-
-
----
-
-## Estrutura do Repositório
-
 ```
 📁 lab-agente-financeiro/
 │
 ├── 📄 README.md
 ├── 📄 requirements.txt
-├── 📄 .env
 │
 ├── 📁 data/                          # Dados mockados para o agente
 │   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
@@ -125,10 +115,12 @@ Esse padrão é utilizado para evitar alucinação.
 │
 ├── 📁 src/                           # Código da aplicação
 │   ├── app.py                         # UI Streamlit
-│   └── guru_core.py                   # Lógica do agente
+│   ├── guru_core.py                   # Lógica do agente
+│   └── llm_client.py                  # Cliente de LLM (OpenAI) e prompt do sistema
 │
 ├── 📁 assets/                        # Imagens e diagramas
     └── screenshot-chat.png           # Tela principal do Guru
+
 
 ```
 
