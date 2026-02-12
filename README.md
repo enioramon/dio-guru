@@ -42,7 +42,6 @@ A[Usuário]
 --> F[Resposta segura ao usuário]
 ```
 
-
 ---
 
 ### Princípio central
@@ -50,7 +49,7 @@ A[Usuário]
 > **LLM não decide números.  
 > O código determinístico garante a verdade dos dados.**
 
-Esse padrão é utilizado em **sistemas financeiros reais** para evitar alucinação.
+Esse padrão é utilizado para evitar alucinação.
 
 ---
 
