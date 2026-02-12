@@ -1,8 +1,7 @@
 # 🤖 Guru — Assistente Financeiro com IA
 
 > Assistente financeiro inteligente com arquitetura determinística de segurança,  
-> combinando raciocínio com LLM, dados financeiros estruturados  
-> e mecanismos de prevenção de alucinações.
+> combinando raciocínio com LLM, dados financeiros estruturados e mecanismos de prevenção de alucinações.
 
 ---
 
