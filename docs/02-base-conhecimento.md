@@ -13,9 +13,6 @@ Esses dados permitem personalizar respostas, realizar simulações financeiras e
 | `produtos_financeiros.json` | JSON | Disponibilizar catálogo de produtos compatíveis com perfil e objetivo |
 | `transacoes.csv` | CSV | Possibilitar análise de gastos e comportamento financeiro do cliente |
 
-> [!TIP]
-> Para evoluções futuras, o Guru pode integrar datasets financeiros públicos (ex.: Hugging Face), desde que compatíveis com o escopo educacional e com validação de segurança.
-
 ---
 
 ## Adaptações nos Dados
