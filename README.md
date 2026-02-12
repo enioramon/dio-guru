@@ -123,4 +123,41 @@ Esse padrão é utilizado para evitar alucinação.
 
 
 ```
+---
+
+## Exemplos de Perguntas
+
+- **Quanto falta para minha reserva?**
+- **Quanto preciso guardar por mês até 2026-06?**
+- **Qual meu patrimônio total?**
+- **Explique Tesouro Selic**
+- **Qual meu score de crédito?** → resposta segura sem alucinação
+
+---
+
+## Avaliação de Qualidade
+
+O **Guru** foi projetado com foco em:
+
+- **Precisão dos cálculos** (valores determinísticos em Python)
+- **Coerência com o perfil do cliente** (filtro de produtos por risco/objetivo)
+- **Respostas seguras sem invenção de dados** (anti-alucinação e recusa quando não há informação)
+- **Clareza na comunicação financeira** (explicações objetivas + disclaimer)
+
+---
+
+## Evoluções Futuras
+
+- Análise automática de gastos por categoria (a partir de `transacoes.csv`)
+- Recomendações financeiras personalizadas com base no histórico do cliente
+- Memória conversacional persistente (contexto entre sessões)
+- Integração com múltiplos LLMs (OpenAI / modelos locais)
+- Deploy em ambiente cloud (ex.: Azure / AWS)
+
+---
+
+## Autor
+
+Projeto desenvolvido por **Ramon**  
+no contexto do bootcamp **Bradesco GenIA & Dados — DIO**.
 
