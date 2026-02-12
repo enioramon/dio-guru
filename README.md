@@ -1,8 +1,8 @@
-# 🤖 Guru — Agente Financeiro Inteligente com IA
+# 🤖 Guru — Assistente Financeiro com IA
 
-> Assistente financeiro educacional que combina **IA generativa**,  
-> **dados estruturados** e **cálculos determinísticos** para apoiar decisões financeiras
-> de forma **segura, transparente e personalizada**.
+> Assistente financeiro inteligente com arquitetura determinística de segurança,  
+> combinando raciocínio com LLM, dados financeiros estruturados  
+> e mecanismos de prevenção de alucinações.
 
 ---
 
