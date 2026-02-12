@@ -31,26 +31,25 @@ O resultado é uma experiência digital que permite ao usuário:
 
 Fluxo principal do sistema:
 
-flowchart LR
+flowchart TD
 
-U[Usuário] --> UI[Interface Conversacional<br/>Streamlit]
+A[Usuário] --> B[Interface Streamlit]
 
-UI --> LLM[LLM OpenAI<br/>Compreensão de Linguagem]
+B --> C[LLM - OpenAI<br/>Interpretação e linguagem natural]
 
-LLM --> CORE[Guru Core<br/>Motor Determinístico]
+C --> D[Guru Core<br/>Regras, cálculos e validações determinísticas]
 
-CORE --> DATA[(Base de Conhecimento)]
+D --> E[Base de Conhecimento]
 
-DATA --> P1[Perfil do Investidor]
-DATA --> P2[Produtos Financeiros]
-DATA --> P3[Transações]
-DATA --> P4[Histórico de Atendimento]
+E --> E1[perfil_investidor.json]
+E --> E2[produtos_financeiros.json]
+E --> E3[transacoes.csv]
+E --> E4[historico_atendimento.csv]
 
-CORE --> SAFE[Validação e Segurança<br/>Anti-Alucinação]
+D --> F[Resposta segura<br/>com anti-alucinação]
 
-SAFE --> UI
-UI
-```
+F --> B
+
 ---
 
 ## Estrutura do Repositório
